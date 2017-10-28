@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.sample.persistence.dao.TestDao">
+    <select id="list" resultType="TestBo">
+		select *
+		from
+		test
+	</select>
+    <insert id="saveAndFlush" parameterType="TestBo">
+		insert test (code, value)
+		values(#{code}, #{value})
+	</insert>
+</mapper>
