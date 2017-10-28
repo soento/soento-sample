@@ -8,18 +8,18 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "TEST")
+@Table(name = "test")
 public class TestBo extends BaseObject {
     @Getter
     @Setter
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    @Column(name = "CODE")
+    @Column(name = "code")
     private String code;
 
     @Getter
     @Setter
-    @Column(name = "VALUE")
+    @Column(name = "value")
     private String value;
 }
