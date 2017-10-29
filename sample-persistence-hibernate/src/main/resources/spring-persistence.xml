@@ -1,12 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xsi:schemaLocation="
-		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
     <description>数据持久模块配置</description>
 
     <import resource="classpath*:soento-db.xml"/>
     <import resource="classpath*:soento-hibernate.xml"/>
-    <import resource="spring-jpa.xml"/>
-
+    <jpa:repositories base-package="com.soento.sample.persistence.dao"/>
 </beans>
